@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: black;
+}
+.vertical-scroll-container {
+  position: relative;
+  width: 5vw;
+  height: 100vh; /* Full height of the container */
+  overflow: hidden;
+  background-color: #d6bcfa; /* Hex color for purple-300 */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vertical-scroll-text {
+  position: absolute;
+  width: 100%;
+  animation: scroll-text 14s linear infinite alternate-reverse;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.vertical-scroll-container {
+  height: auto;
+}
+.swiper {
+  width: 30vw;
+  height: 80vh;
+}
+@media screen and (max-width: 640px) {
+  .main-btn {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+  }
+  .line-explore {
+    padding-top: 10vh;
+  }
+  .swiper {
+    width: 30vw;
+    height: 60vh;
+  }
+  .cardss {
+    padding-top: 20vh;
+  }
+}
+@media screen and (max-width: 360px) {
+  .main-btn {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15vh;
+  }
+  .swiper {
+    width: 80vw;
+    height: 60vh;
+  }
+}
+@media (max-width: 768px) {
+  .btn {
+    /* Adjust button size for smaller screens */
+    padding: 1em;
+    height: auto;
+    width: auto;
+  }
+}
+@media (max-width: 1400px) {
+  .avatar-ico {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+  .card--wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1000px) {
+  .card--wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
